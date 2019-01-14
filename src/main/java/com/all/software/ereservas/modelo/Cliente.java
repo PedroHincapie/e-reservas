@@ -40,6 +40,6 @@ public class Cliente {
 	private String emailCli;
 
 	//Un cliente puede tenener varias reservas, pero una reserva solo tendra un cliente
-	@OneToMany
+	@OneToMany(mappedBy="cliente")
 	private Set<Reserva> reserva;
 }
