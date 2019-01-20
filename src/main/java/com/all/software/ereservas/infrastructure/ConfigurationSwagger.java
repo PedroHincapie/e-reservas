@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.all.software.ereservas.util;
+package com.all.software.ereservas.infrastructure;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
