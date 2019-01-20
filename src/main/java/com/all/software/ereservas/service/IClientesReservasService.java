@@ -15,4 +15,6 @@ public interface IClientesReservasService {
 
 	List<ClientesReservas> findAllClientesReservas(); 
 
+	ClientesReservas saveAllClientesReservas(ClientesReservas entities);
+
 }

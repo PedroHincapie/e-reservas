@@ -32,5 +32,9 @@ public class ClientesReservasService implements IClientesReservasService{
 		return this.clientesReservasRepository.findAll();
 	}
 
-
+	@Transactional
+	@Override
+	public ClientesReservas saveAllClientesReservas(ClientesReservas entity) {
+		return this.clientesReservasRepository.insert(entity);
+	}
 }
