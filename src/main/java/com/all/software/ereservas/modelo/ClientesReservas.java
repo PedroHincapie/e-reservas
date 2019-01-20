@@ -23,16 +23,16 @@ public class ClientesReservas {
 
 	@Id
 	@Getter(AccessLevel.NONE)
-	public ObjectId _id;
+	private ObjectId _id;
 
-	public String idCli;
-	public String nombreCli;
-	public String apellidoCli;
-	public String identificacionCli;
-	public String direccionCli;
-	public String telefonoCli;
-	public String emailCli;
-	public List<Reservas> reserva;
+	private String idCli;
+	private String nombreCli;
+	private String apellidoCli;
+	private String identificacionCli;
+	private String direccionCli;
+	private String telefonoCli;
+	private String emailCli;
+	private List<Reservas> reserva;
 
 	public String getId() {
 		return _id.toHexString();
