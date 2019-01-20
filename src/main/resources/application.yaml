@@ -3,3 +3,12 @@ spring:
     mongodb.host: localhost
     mongodb.port: 27017
     mongodb.database: modelo_reservas
+
+#Comandos para la creacion del modelo reservas
+
+#Creacion de data base
+#use modelo_reservas
+
+#Creacion de documento Reservas
+#db.reservas.insert({"idCli":"1067859785","nombreCli":"Pedro Jesus","apellidoCli":"Hincapie Garcia","identificacionCli":"1067859785","direccionCli":"La granja","telefonoCli":"","emailCli":"pedandniv@hotmail.com","reserva":[{"idReserva":"","fechaIngReserva":"","fechaFinReserva":"","cantReserva":"","descReserva":""}]})
+
