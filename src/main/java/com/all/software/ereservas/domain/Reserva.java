@@ -12,8 +12,8 @@ import lombok.Data;
  */
 
 @Data
-public class Reservas {
-	
+public class Reserva {
+
 	private String idReserva;
 	private String fechaIngReserva;
 	private String fechaFinReserva;

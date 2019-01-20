@@ -1,12 +1,10 @@
 package com.all.software.ereservas.modelo;
 
-import java.util.List;
-
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.all.software.ereservas.domain.Reservas;
+import com.all.software.ereservas.domain.Cliente;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -18,21 +16,13 @@ import lombok.Getter;
  *
  */
 @Data
-@Document(collection = "clientesReservas")
-public class ClientesReservas {
+@Document(collection = "modeloReserva")
+public class ModeloReserva {
 
 	@Id
 	@Getter(AccessLevel.NONE)
 	private ObjectId _id;
-
-	private String idCli;
-	private String nombreCli;
-	private String apellidoCli;
-	private String identificacionCli;
-	private String direccionCli;
-	private String telefonoCli;
-	private String emailCli;
-	private List<Reservas> reserva;
+	private Cliente cliente;
 
 	public String getId() {
 		return _id.toHexString();

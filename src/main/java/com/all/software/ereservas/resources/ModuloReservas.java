@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.all.software.ereservas.domain.Cliente;
-import com.all.software.ereservas.modelo.ClientesReservas;
-import com.all.software.ereservas.service.IClientesReservasService;
+import com.all.software.ereservas.modelo.ModeloReserva;
+import com.all.software.ereservas.service.IModeloReservaService;
+
+
 
 /**
  * Clase que presenta el servico WEB de Cliente
@@ -24,21 +25,19 @@ import com.all.software.ereservas.service.IClientesReservasService;
  */
 @RestController
 @RequestMapping("/api/cliente")
-public class ClienteResource {
+public class ModuloReservas {
 
 	@Autowired
-	private IClientesReservasService clientesReservasService;
+	private IModeloReservaService modeloReservaService;
 
 
 	@GetMapping
-	@RequestMapping("")
-	public ResponseEntity<List<ClientesReservas>> findAllClientesReservas() {
-		return ResponseEntity.ok(clientesReservasService.findAllClientesReservas());
+	public ResponseEntity<List<ModeloReserva>> findAllClientesReservas() {
+		return ResponseEntity.ok(modeloReservaService.findAllModeloReserva());
 	}
 
 	@PostMapping
-	public ResponseEntity<ClientesReservas> saveAllClientesReservas(@RequestBody Cliente cliente){
-		System.err.println(cliente.getApellidoCli());
-		return ResponseEntity.ok(clientesReservasService.saveAllClientesReservas(cliente));
+	public ResponseEntity<ModeloReserva> saveAllClientesReservas(@RequestBody ModeloReserva modeloReserva){
+		return ResponseEntity.ok(modeloReservaService.saveAllModuloReserva(modeloReserva));
 	}
 }
